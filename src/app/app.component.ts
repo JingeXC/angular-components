@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  searchWord:string="";
+  stopshow:boolean = false;
+  goSearch(word:string){
+    this.searchWord = word;
+  }
 }
