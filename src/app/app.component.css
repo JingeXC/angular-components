@@ -1,0 +1,9 @@
+.search-bar{
+	width:300px;
+	background: #ddd;
+	overflow:hidden;
+}
+.search-bar input{
+	width:100%;
+	box-sizing: border-box;
+}

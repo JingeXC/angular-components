@@ -1,0 +1,15 @@
+.search-ul{
+	width:100%;
+}
+.search-ul ul{
+	padding:0px;
+	margin:0px;
+}
+.search-ul li{
+	padding-left:10px;
+	line-height: 26px;
+	height: 26px;
+}
+.search-ul li:hover{
+	background: #ddddff;
+}
