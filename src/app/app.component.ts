@@ -8,8 +8,8 @@ import 'rxjs/Rx';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit{
-	searchWord:string;
-	goSearchWord:string;
+	searchWord:string;//输入的搜索文字
+	goSearchWord:string;//输出给子组件的文字
   searhInput:FormControl=new FormControl();
 
   ngAfterViewInit(){

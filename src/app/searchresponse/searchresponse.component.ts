@@ -10,8 +10,6 @@ export class SearchresponseComponent implements OnInit , OnChanges {
 
   @Input()
   searchWord:string;
-  @Input()
-
 
   @Output()
   selectWord:EventEmitter<any> = new EventEmitter();
