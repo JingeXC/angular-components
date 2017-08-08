@@ -1,2 +1,2 @@
-<input type="text" [(ngModel)]="searchWord">
-<app-searchresponse [searchWord]="searchWord" (selectWord)="goSearch($event)"></app-searchresponse>
+<input type="text" [(ngModel)]="searchWord" [formControl]="searhInput">
+<app-searchresponse [searchWord]="goSearchWord" (selectWord)="goSearch($event)"></app-searchresponse>

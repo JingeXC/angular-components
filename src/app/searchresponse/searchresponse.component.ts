@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output ,EventEmitter , OnChanges ,SimpleChanges} from '@angular/core';
 
+
 @Component({
   selector: 'app-searchresponse',
   templateUrl: './searchresponse.component.html',
@@ -27,8 +28,9 @@ export class SearchresponseComponent implements OnInit , OnChanges {
     ]
   }
   ngOnChanges(changes:SimpleChanges):void{
-    if(this.searchWord){
+    if(this.searchWord == "" || this.searchWord ){
       this.showData=this.searchFoArray(changes.searchWord.currentValue);
+      console.dir(this.showData);
     }
   }
   select(name:string){
