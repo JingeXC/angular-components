@@ -10,6 +10,8 @@ export class SearchresponseComponent implements OnInit , OnChanges {
 
   @Input()
   searchWord:string;
+  @Input()
+
 
   @Output()
   selectWord:EventEmitter<any> = new EventEmitter();
@@ -23,14 +25,13 @@ export class SearchresponseComponent implements OnInit , OnChanges {
       'jack',
       'jane',
       'jackier',
-      'alen',
+      'baker',
       'bob'
     ]
   }
   ngOnChanges(changes:SimpleChanges):void{
     if(this.searchWord == "" || this.searchWord ){
       this.showData=this.searchFoArray(changes.searchWord.currentValue);
-      console.dir(this.showData);
     }
   }
   select(name:string){
@@ -44,6 +45,9 @@ export class SearchresponseComponent implements OnInit , OnChanges {
         if(item[i]== word[i]){
           tempArr.push(item);
         }
+      }
+      if(item == word){
+        return [];
       }
     }
     return tempArr;
